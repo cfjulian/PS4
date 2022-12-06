@@ -339,6 +339,9 @@ analisis6$prediccion <- ifelse(analisis6$topics_train==2, "Petro",
                                       "Lopez"))
 table(analisis6$name==analisis6$prediccion)
 
+#Revisamos coherencia
+p_load(topicdoc)
+topic_diagnostics(train_lda, train_dtm3)
 #El mejor es el modelo 6 (1=Lopez,2=Petro,3=Uribe)
 
 #Unimos a sample_submission
